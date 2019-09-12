@@ -2,7 +2,7 @@
 
 set -e
 
-ACQUIA_DIR=/home/runner/CI_ACQUIA_DIR
+ACQUIA_DIR=/home/runner/drupal-enterprise-teste
 
 ssh-keyscan svn-6185.devcloud.hosting.acquia.com >> /home/runner/.ssh/known_hosts
 
