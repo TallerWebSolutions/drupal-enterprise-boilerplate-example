@@ -21,7 +21,7 @@ stop:
 
 clean:
 	docker-compose down
-	docker rmi APP_IMAGE_NAME
+	docker rmi drupal-enterprise
 
 build:
 	docker-compose build app

@@ -12,7 +12,7 @@ services:
   app:
     extends:
       service: meta
-    image: APP_IMAGE_NAME
+    image: drupal-enterprise
     build:
       context: ./docker/
       args:
@@ -35,7 +35,7 @@ services:
     extends:
       service: meta
     image: mysql:5.6
-    container_name: DB_CONTAINER_NAME
+    container_name: drupal-enterprise-db
     volumes:
       - mysql:/var/lib/mysql
 
