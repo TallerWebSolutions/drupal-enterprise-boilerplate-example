@@ -4,9 +4,9 @@ set -e
 
 ACQUIA_DIR=/home/runner/CI_ACQUIA_DIR
 
-ssh-keyscan ACQUIA_GIT_DOMAIN >> /home/runner/.ssh/known_hosts
+ssh-keyscan svn-6185.devcloud.hosting.acquia.com >> /home/runner/.ssh/known_hosts
 
-git clone --branch master ACQUIA_GIT_REPO $ACQUIA_DIR
+git clone --branch master boilerplate@svn-6185.devcloud.hosting.acquia.com:boilerplate.git $ACQUIA_DIR
 
 # Checkout to the branch, if doesn't exit create and checkout to it.
 (
