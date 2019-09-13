@@ -2,7 +2,7 @@
 
 set -e
 
-ACQUIA_DIR=/home/runner/drupal-enterprise-teste
+ACQUIA_DIR=/home/runner/acquia-dir
 
 ssh-keyscan svn-6185.devcloud.hosting.acquia.com >> /home/runner/.ssh/known_hosts
 
@@ -47,11 +47,12 @@ sudo chmod -R +x $ACQUIA_DIR/hooks
 
 # Configure GIT.
 git config --global core.autocrlf true
-git config --global user.email "email@email.com"
-git config --global user.name "username"
+git config --global user.email "dev@taller.net.br"
+git config --global user.name "Taller Devs Team"
 
 (
   cd $ACQUIA_DIR
+  ln -s docroot web
 
   # Add all the things.
   git add --all .
