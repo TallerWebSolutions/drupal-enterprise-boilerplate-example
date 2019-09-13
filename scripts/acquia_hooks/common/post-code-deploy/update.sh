@@ -21,12 +21,12 @@ deployed_tag="$4"
 repo_url="$5"
 repo_type="$6"
 
-echo site
-echo target_env
+echo $site
+echo $target_env
 
 drush_alias=$site'.'$target_env
 
-echo drush_alias
+echo $drush_alias
 
 (
   cd /var/www/html/$drush_alias/docroot
