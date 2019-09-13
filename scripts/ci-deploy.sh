@@ -47,8 +47,8 @@ sudo chmod -R +x $ACQUIA_DIR/hooks
 
 # Configure GIT.
 git config --global core.autocrlf true
-git config --global user.email "GIT_USER_EMAIL"
-git config --global user.name "GIT_USER_NAME"
+git config --global user.email "email@email.com"
+git config --global user.name "username"
 
 (
   cd $ACQUIA_DIR
