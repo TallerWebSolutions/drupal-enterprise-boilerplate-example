@@ -21,24 +21,24 @@ deployed_tag="$4"
 repo_url="$5"
 repo_type="$6"
 
-echo site
-echo target_env
+echo $site
+echo $target_env
 
 drush_alias=$site'.'$target_env
 
-echo drush_alias
+echo $drush_alias
 
-(
-  cd /var/www/html/$drush_alias/docroot
+# (
+#   cd /var/www/html/$drush_alias/docroot
 
-  ../bin/drush @$drush_alias updb -y -vdd
-  ../bin/drush @$drush_alias config-import --partial sync -y -vdd
-  ../bin/drush @$drush_alias cr -vdd
-  ../bin/drush @$drush_alias entity-updates -y -vdd
-)
+#   ../bin/drush @$drush_alias updb -y -vdd
+#   ../bin/drush @$drush_alias config-import --partial sync -y -vdd
+#   ../bin/drush @$drush_alias cr -vdd
+#   ../bin/drush @$drush_alias entity-updates -y -vdd
+# )
 
-if [ "$source_branch" != "$deployed_tag" ]; then
-  echo "[$(date)] $site.$target_env: Deploying branch $source_branch as $deployed_tag."
-else
-  echo "[$(date)] $site.$target_env: Deployed $deployed_tag."
-fi
+# if [ "$source_branch" != "$deployed_tag" ]; then
+#   echo "[$(date)] $site.$target_env: Deploying branch $source_branch as $deployed_tag."
+# else
+#   echo "[$(date)] $site.$target_env: Deployed $deployed_tag."
+# fi
