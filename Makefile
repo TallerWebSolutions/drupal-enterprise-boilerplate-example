@@ -23,7 +23,7 @@ stop:
 
 clean:
 	docker-compose down
-	docker rmi APP_IMAGE_NAME
+	docker rmi app-image-name
 
 ci-clean:
 	docker-compose down
