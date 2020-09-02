@@ -12,7 +12,7 @@ services:
   app:
     extends:
       service: meta
-    image: app-imagae-name
+    image: app-image-name
     build:
       context: ./docker/
       args:
